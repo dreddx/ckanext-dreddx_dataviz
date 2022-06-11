@@ -21,7 +21,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/Github user or organization name/ckanext-dreddx_dataviz',
+    url='https://github.com/dreddx/ckanext-dreddx_dataviz',
 
     # Author details
     author='''Dreddx''',
