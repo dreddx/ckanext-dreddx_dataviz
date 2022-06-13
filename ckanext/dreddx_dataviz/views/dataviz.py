@@ -6,7 +6,7 @@ import ckan.plugins.toolkit as tk
 render = tk.render
 log = logging.getLogger(__name__)
 
-dreddx_dataviz_gallery = Blueprint(u'dreddx_dataviz_gallery', __name__, url_prefix=u'/dataviz-gallery')
+dreddx_dataviz_gallery = Blueprint(u'dreddx_dataviz_gallery', __name__, url_prefix=u'/dataviz')
 
 def index():
     return _index('dataviz/index.html')
