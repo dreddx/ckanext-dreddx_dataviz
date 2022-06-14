@@ -1,7 +1,13 @@
+from flask import Blueprint
+
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
-import ckanext.dreddx_dataviz.views.dataviz as dataviz
+dreddx_dataviz_gallery = Blueprint(u'dreddx_dataviz_gallery', __name__)
+
+@dreddx_dataviz_gallery.route("/dataviz-gallery")
+def dataviz_gallery():
+    return toolkit.render("dataviz/index.html")
 
 class DreddxDatavizPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -9,9 +15,7 @@ class DreddxDatavizPlugin(plugins.SingletonPlugin):
 
     # IBlueprint
     def get_blueprint(self):
-        return [
-            dataviz.dreddx_dataviz_gallery
-        ]
+        return dreddx_dataviz_gallery
 
     # IConfigurer
     def update_config(self, config_):
