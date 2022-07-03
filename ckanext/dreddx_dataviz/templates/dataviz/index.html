@@ -1,13 +1,16 @@
 {% extends "page.html" %}
 
 {% block primary %}
-    <iframe 
-    data-module="data-viewer"
-    style="width: 100%; height: 100%; background-color: inherit;"
-    data-hj-allow-iframe=""
-    src="https://dreddx.github.io/viz-datagrid/"
-    frameborder="0">
-    </iframe>
+    <div class="col-xs-12">
+        <h1>Overview of Data Grids</h1>
+        <iframe 
+        data-module="data-viewer"
+        style="width: 100%; height: 600px; max-height: 1700px; height: 600px; background-color: inherit;"
+        data-hj-allow-iframe=""
+        src="https://dreddx.github.io/viz-datagrid/"
+        frameborder="0">
+        </iframe>
+    </div>
 {% endblock %}
 
 {% block breadcrumb %}
